@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>job creator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="uikit/css/uikit.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+
+<body>
+<div class="uk-padding">
+    <label class="uk-form-label" for="job_number">job number</label>
+    <input id="job_number" type="text" class="uk-input">
+    <label class="uk-form-label" for="job_name">job name</label>
+    <input id="job_name" type="text" class="uk-input">
+    <div class="uk-width-1-1 uk-margin">
+        <div class="uk-width-2-3" style="float: left">
+            <button id="create" class="uk-button uk-button-primary uk-width-1-1 uk-margin">create</button>
+        </div>
+        <div class="uk-width-1-3" style="float: right" >
+            <button id="settings" onclick="loadSettings()" class="uk-button uk-button-default uk-width-1-1 uk-margin" href="#modal-full" uk-toggle><i class="fas fa-cog"></i></button>
+        </div>
+    </div>
+</div>
+
+<div id="modal-full" class="uk-modal-full" uk-modal>
+    <div class="uk-modal-dialog uk-padding">
+        <label class="uk-form-label" for="cad_folder">CAD folder</label>
+        <input id="cad_folder" type="text" class="uk-input">
+        <label class="uk-form-label" for="job_name">prefix</label>
+        <input id="prefix" type="text" class="uk-input">
+        <label class="uk-form-label" for="jobs_folder">jobs folder</label>
+        <input id="jobs_folder" type="text" class="uk-input">
+        <label class="uk-form-label" for="pdf_location">production planning pdf</label><br>
+        <div uk-form-custom>
+            <input id="pdf_location" type="file">
+            <button class="uk-button uk-button-default" type="button" tabindex="-1">Select</button>
+        </div>
+        <div class="uk-width-1-1 uk-margin">
+            <div class="uk-width-1-2" style="float: left">
+                <button id="save" onclick="saveSettings()" class="uk-button uk-button-primary uk-width-1-1 uk-margin" href="#modal-full" uk-toggle>save</button>
+            </div>
+            <div class="uk-width-1-2" style="float: right" >
+                <button id="cancel" class="uk-button uk-button-danger uk-width-1-1 uk-margin" href="#modal-full" uk-toggle>cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/script.js"></script>
+<script src="uikit/js/uikit.js"></script>
+</body>
+
+</html>
